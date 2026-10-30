@@ -98,12 +98,11 @@ section{padding-block:64px}
 .prov .final strong{font-family:var(--font);font-weight:800;font-size:1rem;color:var(--card)}
 
 /* coming soon cards */
-.vote{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px;margin-bottom:28px}
+.vote{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px}
 .choice{background:var(--teal);color:var(--ink);border-radius:22px;padding:22px 24px;font-weight:800;font-size:1.15rem;line-height:1.25;letter-spacing:-.02em}
 .choice:nth-child(3n+2){background:var(--yellow)}
 .choice:nth-child(3n+3){background:var(--coral)}
 .choice span{display:block;font-family:var(--mono);font-weight:500;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
-.actions{display:flex;flex-wrap:wrap;gap:12px}
 
 /* invitation */
 .invite{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center}
@@ -125,7 +124,7 @@ footer a:hover{color:var(--fg)}
 @media (max-width:520px){
   .hero{padding-block:36px 48px}
   section{padding-block:48px}
-  .ticket .btn,.actions .btn{flex:1 1 100%}
+  .ticket .btn{flex:1 1 100%}
 }
 </style>
 </head>
@@ -219,9 +218,6 @@ footer a:hover{color:var(--fg)}
         <div class="choice"><span>Gallery 1</span>A guitar that sold for more than any other in history</div>
         <div class="choice"><span>Gallery 2</span>A wall that was built, and torn down, every single night</div>
         <div class="choice"><span>The secret wing</span>A pig that grounded flights at Heathrow</div>
-      </div>
-      <div class="actions">
-        <a class="btn btn-primary" href="https://youtu.be/FO67KNUy0-o" target="_blank" rel="noopener">Sign the guest book</a>
       </div>
     </section>
 
