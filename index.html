@@ -52,11 +52,18 @@ nav a:hover{color:var(--fg)}
 .hero{padding-block:64px 64px;display:grid;gap:22px}
 .hero h1{font-size:clamp(1.9rem,4.2vw,3.3rem)}
 .hero h1 em{font-style:normal}
-.hero > p{font-size:1.15rem;color:var(--muted);max-width:56ch;margin:0}
-.video{margin-top:16px;aspect-ratio:16/9;width:100%;max-width:700px;border-radius:20px;overflow:hidden;background:#0d0d0d;
+.hero-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.55fr);gap:40px;align-items:center;margin-top:8px}
+.hero-text{display:grid;gap:22px}
+.hero-text p{font-size:1.15rem;color:var(--muted);max-width:56ch;margin:0}
+@media (max-width:860px){
+  .hero-body{grid-template-columns:1fr;gap:28px}
+  .hero-text{display:contents}  /* on narrow screens: intro, then the video, then the button */
+  .hero-text .ticket{order:3}
+}
+.video{aspect-ratio:16/9;width:100%;border-radius:20px;overflow:hidden;background:#0d0d0d;
   box-shadow:0 -24px 80px -30px rgba(47,211,197,.45), 0 40px 110px -30px rgba(255,92,170,.45)}
 .video iframe{display:block;width:100%;height:100%;border:0}
-.ticket{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:12px}
+.ticket{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 
 /* buttons */
 .btn{font-family:var(--font);font-weight:800;font-size:1rem;letter-spacing:-.01em;text-decoration:none;border-radius:999px;padding:13px 26px;min-height:48px;
@@ -141,13 +148,16 @@ footer a:hover{color:var(--fg)}
     <div class="hero">
       <div class="eyebrow">Now showing · Exhibition No. 1</div>
       <h1>The Beatles: <em>“The Magical Mystery Tour”</em></h1>
-      <p>A virtual museum where every exhibit tells the true story behind music's most famous objects. Step inside for a guided tour of three Beatles artifacts, the history behind them, and the auction records they set.</p>
-      <div class="video">
-        <iframe src="https://www.youtube-nocookie.com/embed/FO67KNUy0-o" title="The Beatles: “The Magical Mystery Tour” — The Museum of Music" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <div class="ticket">
-        <a class="btn btn-primary" href="https://youtu.be/FO67KNUy0-o" target="_blank" rel="noopener">Watch on YouTube</a>
-        <a class="btn btn-quiet" href="#now-showing">See what's on display</a>
+      <div class="hero-body">
+        <div class="hero-text">
+          <p>A virtual museum where every exhibit tells the true story behind music's most famous objects. Step inside for a guided tour of three Beatles artifacts, the history behind them, and the auction records they set.</p>
+          <div class="ticket">
+            <a class="btn btn-primary" href="https://youtu.be/FO67KNUy0-o" target="_blank" rel="noopener">Watch on YouTube</a>
+          </div>
+        </div>
+        <div class="video">
+          <iframe src="https://www.youtube-nocookie.com/embed/FO67KNUy0-o" title="The Beatles: “The Magical Mystery Tour” — The Museum of Music" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
 
@@ -211,8 +221,7 @@ footer a:hover{color:var(--fg)}
         <div class="choice"><span>The secret wing</span>A pig that grounded flights at Heathrow</div>
       </div>
       <div class="actions">
-        <a class="btn btn-primary" href="#invitations">Get your invitation to the opening</a>
-        <a class="btn btn-quiet" href="https://youtu.be/FO67KNUy0-o" target="_blank" rel="noopener">Sign the guest book</a>
+        <a class="btn btn-primary" href="https://youtu.be/FO67KNUy0-o" target="_blank" rel="noopener">Sign the guest book</a>
       </div>
     </section>
 
