@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /design-reference/
+
+Sitemap: https://museum-of-music.com/sitemap.xml
