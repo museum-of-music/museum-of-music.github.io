@@ -91,6 +91,10 @@ section{padding-block:64px}
 .choice:nth-child(3n+3){background:var(--coral)}
 .choice span{display:block;font-family:var(--mono);font-weight:500;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
 
+/* page not found */
+.lost{font-size:1.15rem;color:var(--muted);max-width:56ch;margin:0}
+.lost + .ticket{margin-top:8px}
+
 /* exhibition pages: credits & sources */
 .more{margin:28px 0 0}
 .more a{color:var(--teal);text-decoration:none;font-weight:800}
